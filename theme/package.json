@@ -1,0 +1,17 @@
+{
+  "name": "gatsby-theme-esports",
+  "author": "Domirius Clark",
+  "keywprds": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.13.45",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
