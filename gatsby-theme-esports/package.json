@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-theme-esports",
+  "author": "Domirius Clark",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.45",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@mdx-js/react": "^1.1.5",
+    "gatsby-theme-ui": "^0.2.0",
+    "theme-ui": "^0.2.26"
+  }
+}
