@@ -5,7 +5,11 @@ const elementStyles = {
     fontFamily: "body",
     lineHeight: "body",
     background: colors.background,
-    color: colors.text
+    color: colors.text,
+    maxHeight: "100%",
+    maxWidth: "100%",
+    margin: 0,
+    padding: 0
   }
 };
 

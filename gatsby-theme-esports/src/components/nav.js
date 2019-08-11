@@ -4,9 +4,11 @@ import { Link } from "gatsby";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav sx={{ background: "background", margin: 0, padding: 0 }}>
       <ul>
-        <Link to="/about">About</Link>
+        <Link to="/about" sx={{ variant: "textStyles.navLink" }}>
+          About
+        </Link>
       </ul>
     </nav>
   );

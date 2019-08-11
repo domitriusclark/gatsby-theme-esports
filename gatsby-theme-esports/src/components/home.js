@@ -1,12 +1,16 @@
-/** @jsx jsx  */
-import { jsx } from "theme-ui";
-
+import React from "react";
 import Layout from "../components/layout";
+import styled from "styled-components";
+
+const H1 = styled.h1`
+  color: ${props => props.color || props.theme.colors.text};
+  text-align: center;
+`;
 
 const Home = () => {
   return (
     <Layout>
-      <h1 sx={{ textAlign: "center" }}>This is the home page</h1>
+      <H1>This is the home page</H1>
     </Layout>
   );
 };

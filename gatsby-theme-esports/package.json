@@ -20,10 +20,6 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.15",
-    "@emotion/styled": "^10.0.15",
-    "@mdx-js/react": "^1.1.5",
-    "gatsby-plugin-theme-ui": "^0.2.29",
-    "theme-ui": "^0.2.26"
+    "styled-components": "^4.3.2"
   }
 }

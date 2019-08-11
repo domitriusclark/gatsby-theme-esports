@@ -28,7 +28,10 @@ const textStyles = {
     color: "inherit",
     textDecoration: "none",
     lineHeight: 1,
-    mx: 1
+    mx: 1,
+    "&:after, &:visited": {
+      textDecoration: "none"
+    }
   }
 };
 
