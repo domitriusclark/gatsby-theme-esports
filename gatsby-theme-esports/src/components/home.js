@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "./layout";
+import Button from "./button";
 
 const Home = () => {
   return (
     <Layout>
-      <h1> This is the home page </h1>
+      <Button secondary>Hello</Button>
     </Layout>
   );
 };
