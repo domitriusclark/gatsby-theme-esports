@@ -14,7 +14,7 @@ const Home = () => {
       <Button small>Hello</Button>
       <Button medium>Hello</Button>
       <Button large>Hello</Button>
-      <Button padding={"4rem"} fontSize={`4rem`}>
+      <Button padding="4rem" fontSize="4rem">
         Hello
       </Button>
     </Layout>
