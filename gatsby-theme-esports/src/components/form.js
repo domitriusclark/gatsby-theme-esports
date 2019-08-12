@@ -5,6 +5,8 @@ import styled from "styled-components";
 const Form = ({ children }) => {
   const [values, setValues] = React.useState({});
 
+  console.log(values);
+
   return (
     <StyledForm>
       {children &&
@@ -12,7 +14,7 @@ const Form = ({ children }) => {
         children.map(child => {
           return child.type === "input" ? (
             <input
-              name={child.props.name}
+              {...child.props}
               onChange={e =>
                 setValues({
                   ...values,
