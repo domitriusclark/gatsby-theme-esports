@@ -1,9 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
+const Button = ({
+  children,
+  secondary,
+  onClick,
+  small,
+  medium,
+  large,
+  fontSize,
+  padding
+}) => {
+  return (
+    <StyledButton
+      onClick={onClick}
+      secondary={secondary}
+      small={small}
+      medium={medium}
+      large={large}
+      padding={padding}
+      fontSize={fontSize}
+    >
+      {children}
+    </StyledButton>
+  );
+};
+
 const StyledButton = styled.button`
   border: 1px solid ${props => props.theme.colors.borderColor};
-  border-radius: 1.3rem;
+  border-radius: 0.8rem;
   background: ${props =>
     props.secondary
       ? props.theme.colors.secondaryColor
@@ -34,30 +59,5 @@ const StyledButton = styled.button`
         : props.theme.colors.secondaryColor};
   }
 `;
-
-const Button = ({
-  children,
-  secondary,
-  onClick,
-  small,
-  medium,
-  large,
-  fontSize,
-  padding
-}) => {
-  return (
-    <StyledButton
-      onClick={onClick}
-      secondary={secondary}
-      small={small}
-      medium={medium}
-      large={large}
-      padding={padding}
-      fontSize={fontSize}
-    >
-      {children}
-    </StyledButton>
-  );
-};
 
 export default Button;

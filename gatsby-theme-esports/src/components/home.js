@@ -6,7 +6,11 @@ import Form from "./form";
 const Home = () => {
   return (
     <Layout>
-      <Form />
+      <Form>
+        <input name="email" />
+        <input name="password" />
+        <Button>Does this</Button>
+      </Form>
       <Button small>Hello</Button>
       <Button medium>Hello</Button>
       <Button large>Hello</Button>
