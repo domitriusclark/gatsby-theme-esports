@@ -3,4 +3,8 @@ exports.createPages = ({ actions }) => {
     path: "/",
     component: require.resolve("./src/components/home.js")
   });
+  actions.createPage({
+    path: "/about",
+    component: require.resolve("./src/components/about.js")
+  });
 };
