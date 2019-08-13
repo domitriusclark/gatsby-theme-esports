@@ -1,8 +1,3 @@
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-theme-esports",
-      options: {}
-    }
-  ]
+  plugins: ["gatsby-theme-esports"]
 };
