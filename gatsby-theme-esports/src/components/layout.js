@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import theme from "../theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -11,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        height: 100%;
+        height: ${props => props.height || "100%"};
         width: 100%;
         background: ${props => props.theme.colors.primaryColor};
         padding: 0;
@@ -25,27 +26,24 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: hidden;
-
-        & a {
-            &:after,
-            &:visited {
-                text-decoration: none;
-            }
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
 `;
 
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Layout = ({ children }) => {
+  const { height, width } = useWindowDimensions();
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
-        <GlobalStyle />
+      <Container>
+        <GlobalStyle height={height} />
         {children}
-      </Fragment>
+      </Container>
     </ThemeProvider>
   );
 };
