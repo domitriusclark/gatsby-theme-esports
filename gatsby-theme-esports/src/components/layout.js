@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import theme from "../theme";
@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
     html {
         height: ${props => props.height || "100%"};
         width: 100%;
-        background: ${props => props.theme.colors.primaryColor};
+        background: ${props =>
+          props.primaryColor || props.theme.colors.primaryColor};
         padding: 0;
         margin: 0 auto;
         font-size: 62.5%;  /* 10px === 1rem */

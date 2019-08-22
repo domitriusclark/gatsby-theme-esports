@@ -8,12 +8,12 @@ const StyledLanding = styled.div`
   background: white;
 `;
 
-const Landing = ({ location }) => {
+const Landing = ({ pageContext }) => {
   const { height, width } = useWindowDimensions();
-
+  console.log(pageContext);
   return (
-    <Layout location={location}>
-      <Header />
+    <Layout>
+      <Header navLinks={pageContext.navLinks} />
       <StyledLanding style={{ height: height }} />
     </Layout>
   );

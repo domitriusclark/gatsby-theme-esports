@@ -15,43 +15,38 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => {
+const Header = ({ navLinks }) => {
+  const navigation =
+    navLinks &&
+    navLinks.map(link => {
+      if (link === "Home") {
+        return (
+          <li>
+            <AniLink cover direction="right" duration=".8" to="/">
+              Home
+            </AniLink>
+          </li>
+        );
+      } else {
+        return (
+          <li>
+            <AniLink
+              cover
+              direction="right"
+              duration=".8"
+              to={`/${link.toLowerCase()}`}
+            >
+              {link}
+            </AniLink>
+          </li>
+        );
+      }
+    });
   return (
     <StyledHeader>
       <Location>
         {props => {
-          const { location } = props;
-          return (
-            <ul>
-              <li>
-                {location.origin === "/" ? (
-                  <AniLink cover direction="right" duration=".8" to="/">
-                    Home
-                  </AniLink>
-                ) : (
-                  <AniLink cover direction="left" duration=".8" to="/">
-                    Home
-                  </AniLink>
-                )}
-              </li>
-              <li>
-                {location.origin === "/" ? (
-                  <AniLink cover direction="right" duration=".8" to="/about">
-                    About
-                  </AniLink>
-                ) : (
-                  <AniLink cover direction="left" duration=".8" to="/about">
-                    About
-                  </AniLink>
-                )}
-              </li>
-              <li>
-                <AniLink cover direction="left" duration=".8" to="/team">
-                  Team
-                </AniLink>
-              </li>
-            </ul>
-          );
+          return <ul>{navigation}</ul>;
         }}
       </Location>
       }

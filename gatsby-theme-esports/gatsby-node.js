@@ -1,7 +1,10 @@
-exports.createPages = ({ actions }) => {
+exports.createPages = ({ actions }, themeOptions) => {
   actions.createPage({
     path: "/",
-    component: require.resolve("./src/templates/landing.js")
+    component: require.resolve("./src/templates/landing.js"),
+    context: {
+      navLinks: themeOptions.navLinks
+    }
   });
 
   actions.createPage({
