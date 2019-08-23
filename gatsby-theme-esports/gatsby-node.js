@@ -9,6 +9,9 @@ exports.createPages = ({ actions }, themeOptions) => {
 
   actions.createPage({
     path: "/about",
-    component: require.resolve("./src/templates/about.js")
+    component: require.resolve("./src/templates/about.js"),
+    context: {
+      navLinks: themeOptions.navLinks
+    }
   });
 };

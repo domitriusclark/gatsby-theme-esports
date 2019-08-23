@@ -5,14 +5,14 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import Header from "../components/header";
 
 const StyledAbout = styled.div`
-  background: blue;
+  background: white;
 `;
 
-const About = () => {
+const About = ({ pageContext }) => {
   const { height, width } = useWindowDimensions();
   return (
     <Layout>
-      <Header />
+      <Header navLinks={pageContext.navLinks} />
       <StyledAbout style={{ height: height }} />
     </Layout>
   );

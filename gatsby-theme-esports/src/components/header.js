@@ -46,6 +46,7 @@ const Header = ({ navLinks }) => {
     <StyledHeader>
       <Location>
         {props => {
+          const { location } = props;
           return <ul>{navigation}</ul>;
         }}
       </Location>
