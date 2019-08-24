@@ -31,12 +31,11 @@ const Header = () => {
     navLinks &&
     navLinks.map(link => {
       return (
-        <li>
+        <li key={link}>
           <AniLink
             cover
             direction="right"
             duration=".8"
-            key={link}
             to={`/${link.toLowerCase()}`}
           >
             {link}
