@@ -2,7 +2,10 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-theme-esports",
-      options: {}
-    }
+      options: {
+        navLinks: ["About", "Team"]
+      }
+    },
+    "gatsby-plugin-transition-link"
   ]
 };

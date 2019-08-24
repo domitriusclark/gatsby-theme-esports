@@ -1,5 +1,7 @@
-import React, { Fragment } from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import React from "react";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+// import { useStaticQuery, graphql } from "gatsby";
 import theme from "../theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -11,9 +13,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        height: 100%;
+        height: ${props => props.height || "100%"};
         width: 100%;
-        background: ${props => props.theme.colors.primaryColor};
+        background: ${props =>
+          props.primaryColor || props.theme.colors.primaryColor};
         padding: 0;
         margin: 0 auto;
         font-size: 62.5%;  /* 10px === 1rem */
@@ -25,27 +28,39 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: hidden;
-
-        & a {
-            &:after,
-            &:visited {
-                text-decoration: none;
-            }
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
 `;
 
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Layout = ({ children }) => {
+  const { height } = useWindowDimensions();
+  /*
+
+  ** We will use this to allow the plugin options to dictate some theme styles **
+
+   const { sitePlugin } = useStaticQuery(graphql`
+     query PluginQuery {
+       sitePlugin(name: { eq: "gatsby-theme-esports" }) {
+         pluginOptions {
+           colors
+         }
+       }
+     }
+   `);
+
+  */
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
-        <GlobalStyle />
+      <Container>
+        <GlobalStyle height={height} />
         {children}
-      </Fragment>
+      </Container>
     </ThemeProvider>
   );
 };

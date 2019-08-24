@@ -2,17 +2,18 @@ import React from "react";
 import Button from "./button";
 import styled from "styled-components";
 
-const Form = ({ children, padding }) => {
+const Form = ({ children, padding, onSubmit }) => {
   const [values, setValues] = React.useState({});
 
   return (
-    <StyledForm padding={padding}>
+    <StyledForm padding={padding} onSubmit={onSubmit}>
       {children &&
         children.length > 1 &&
         children.map(child => {
           return child.type === "input" ? (
             <input
               {...child.props}
+              key={child.props.name}
               onChange={e =>
                 setValues({
                   ...values,
