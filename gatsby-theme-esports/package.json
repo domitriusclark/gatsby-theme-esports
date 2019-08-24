@@ -15,7 +15,6 @@
     "develop": "gatsby develop"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.45",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

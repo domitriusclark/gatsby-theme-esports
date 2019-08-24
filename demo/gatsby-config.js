@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-esports",
       options: {
-        navLinks: ["Home", "About", "Team"]
+        navLinks: ["About", "Team"]
       }
     },
     "gatsby-plugin-transition-link"

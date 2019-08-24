@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+// import { useStaticQuery, graphql } from "gatsby";
 import theme from "../theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -38,7 +39,22 @@ const Container = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const { height, width } = useWindowDimensions();
+  const { height } = useWindowDimensions();
+  /*
+
+  ** We will use this to allow the plugin options to dictate some theme styles **
+
+   const { sitePlugin } = useStaticQuery(graphql`
+     query PluginQuery {
+       sitePlugin(name: { eq: "gatsby-theme-esports" }) {
+         pluginOptions {
+           colors
+         }
+       }
+     }
+   `);
+
+  */
   return (
     <ThemeProvider theme={theme}>
       <Container>

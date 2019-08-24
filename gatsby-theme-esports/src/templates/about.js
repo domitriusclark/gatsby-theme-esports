@@ -9,7 +9,7 @@ const StyledAbout = styled.div`
 `;
 
 const About = ({ pageContext }) => {
-  const { height, width } = useWindowDimensions();
+  const { height } = useWindowDimensions();
   return (
     <Layout>
       <Header navLinks={pageContext.navLinks} />

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { Location } from "@reach/router";
+import { useStaticQuery, graphql } from "gatsby";
+// import { Location } from "@reach/router" <----- We will want this when we want to help decide the transition based on route
 
 const StyledHeader = styled.header`
   & ul {
@@ -15,41 +16,44 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = ({ navLinks }) => {
+const Header = () => {
+  const { sitePlugin } = useStaticQuery(graphql`
+    query PluginQuery {
+      sitePlugin(name: { eq: "gatsby-theme-esports" }) {
+        pluginOptions {
+          navLinks
+        }
+      }
+    }
+  `);
+  const navLinks = sitePlugin.pluginOptions.navLinks;
   const navigation =
     navLinks &&
     navLinks.map(link => {
-      if (link === "Home") {
-        return (
-          <li>
-            <AniLink cover direction="right" duration=".8" to="/">
-              Home
-            </AniLink>
-          </li>
-        );
-      } else {
-        return (
-          <li>
-            <AniLink
-              cover
-              direction="right"
-              duration=".8"
-              to={`/${link.toLowerCase()}`}
-            >
-              {link}
-            </AniLink>
-          </li>
-        );
-      }
+      return (
+        <li>
+          <AniLink
+            cover
+            direction="right"
+            duration=".8"
+            key={link}
+            to={`/${link.toLowerCase()}`}
+          >
+            {link}
+          </AniLink>
+        </li>
+      );
     });
   return (
     <StyledHeader>
-      <Location>
-        {props => {
-          const { location } = props;
-          return <ul>{navigation}</ul>;
-        }}
-      </Location>
+      <ul>
+        <li>
+          <AniLink cover direction="right" duration=".8" to="/">
+            Home
+          </AniLink>
+        </li>
+        {navigation}
+      </ul>
       }
     </StyledHeader>
   );
