@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useStaticQuery, graphql } from "gatsby";
-import theme from "../theme";
+import { device } from "../theme/device";
 
 const GlobalStyle = createGlobalStyle`
     *,
@@ -75,28 +75,18 @@ const Layout = ({ children }) => {
 
   const pluginColors = sitePlugin.pluginOptions.colors;
 
-  const device = theme.device;
-
-  const themeWithUserConfig = {
+  const theme = {
     colors: { ...sitePlugin.pluginOptions.colors },
     ...device
   };
 
   return (
-    <ThemeProvider
-      theme={sitePlugin.pluginOptions.colors ? themeWithUserConfig : theme}
-    >
+    <ThemeProvider theme={sitePlugin.pluginOptions.colors && theme}>
       <Container>
         <GlobalStyle
           height={height}
-          primaryColor={
-            pluginColors ? pluginColors.background : theme.colors.background
-          }
-          color={
-            pluginColors
-              ? pluginColors.primaryColor
-              : theme.colors.secondaryColor
-          }
+          primaryColor={pluginColors && pluginColors.background}
+          color={pluginColors && pluginColors.primaryColor}
         />
         {children}
       </Container>
