@@ -15,8 +15,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         height: ${props => props.height || "100%"};
         width: 100%;
-        background: ${props =>
-          props.background || props.theme.colors.background};
+        background: ${props => props.theme.colors.background};
         padding: 0;
         margin: 0 auto;
         font-size: 62.5%;  /* 10px === 1rem */
@@ -28,10 +27,10 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: hidden;
-        color: ${props => props.color || props.theme.colors.primaryColor};
+        color: ${props => props.theme.colors.primaryColor};
 
         & a {
-          color: ${props => props.color || props.theme.colors.primaryColor};
+          color: ${props => props.theme.colors.primaryColor};
 
           &:-webkit-any-link {
             text-decoration: none;
@@ -81,13 +80,9 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <ThemeProvider theme={sitePlugin.pluginOptions.colors && theme}>
+    <ThemeProvider theme={pluginColors && theme}>
       <Container>
-        <GlobalStyle
-          height={height}
-          primaryColor={pluginColors && pluginColors.background}
-          color={pluginColors && pluginColors.primaryColor}
-        />
+        <GlobalStyle height={height} />
         {children}
       </Container>
     </ThemeProvider>
