@@ -22,11 +22,14 @@ const Header = () => {
       sitePlugin(name: { eq: "gatsby-theme-esports" }) {
         pluginOptions {
           navLinks
+          colors {
+            secondaryColor
+          }
         }
       }
     }
   `);
-  const navLinks = sitePlugin.pluginOptions.navLinks;
+  const { navLinks, colors } = sitePlugin.pluginOptions;
   const navigation =
     navLinks &&
     navLinks.map(link => {
@@ -36,6 +39,7 @@ const Header = () => {
             cover
             direction="right"
             duration=".8"
+            bg={colors.secondaryColor}
             to={`/${link.toLowerCase()}`}
           >
             {link}
@@ -47,7 +51,13 @@ const Header = () => {
     <StyledHeader>
       <ul>
         <li>
-          <AniLink cover direction="right" duration=".8" to="/">
+          <AniLink
+            cover
+            direction="right"
+            bg={colors.secondaryColor}
+            duration=".8"
+            to="/"
+          >
             Home
           </AniLink>
         </li>

@@ -8,4 +8,9 @@ exports.createPages = ({ actions }) => {
     path: "/about",
     component: require.resolve("./src/templates/about.js")
   });
+
+  actions.createPage({
+    path: "/team",
+    component: require.resolve("./src/templates/team.js")
+  });
 };
