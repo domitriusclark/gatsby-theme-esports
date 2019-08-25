@@ -4,9 +4,7 @@ import styled from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import Header from "../components/header";
 
-const StyledAbout = styled.div`
-  background: white;
-`;
+const StyledAbout = styled.div``;
 
 const About = ({ pageContext }) => {
   const { height } = useWindowDimensions();

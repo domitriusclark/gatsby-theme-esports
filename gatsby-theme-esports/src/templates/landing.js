@@ -5,8 +5,6 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import Header from "../components/header";
 
 const StyledLanding = styled.div`
-  background: white;
-
   & p {
     color: ${props => props.theme.colors.secondaryColor};
   }
@@ -14,6 +12,7 @@ const StyledLanding = styled.div`
 
 const Landing = () => {
   const { height } = useWindowDimensions();
+
   return (
     <Layout>
       <Header />

@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: hidden;
+        background: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.primaryColor};
 
         & a {
