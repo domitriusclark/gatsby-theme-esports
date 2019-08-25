@@ -6,6 +6,10 @@ import Header from "../components/header";
 
 const StyledLanding = styled.div`
   background: white;
+
+  & p {
+    color: ${props => props.theme.colors.secondaryColor};
+  }
 `;
 
 const Landing = () => {
@@ -13,7 +17,9 @@ const Landing = () => {
   return (
     <Layout>
       <Header />
-      <StyledLanding style={{ height: height }} />
+      <StyledLanding style={{ height: height }}>
+        <p>Hello there</p>
+      </StyledLanding>
     </Layout>
   );
 };

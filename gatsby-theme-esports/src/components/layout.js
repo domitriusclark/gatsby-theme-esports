@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-// import { useStaticQuery, graphql } from "gatsby";
-import theme from "../theme";
+import { useStaticQuery, graphql } from "gatsby";
+import { device } from "../theme/device";
 
 const GlobalStyle = createGlobalStyle`
     *,
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         height: ${props => props.height || "100%"};
         width: 100%;
         background: ${props =>
-          props.primaryColor || props.theme.colors.primaryColor};
+          props.background || props.theme.colors.background};
         padding: 0;
         margin: 0 auto;
         font-size: 62.5%;  /* 10px === 1rem */
@@ -28,6 +28,24 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow: hidden;
+        color: ${props => props.color || props.theme.colors.primaryColor};
+
+        & a {
+          color: ${props => props.color || props.theme.colors.primaryColor};
+
+          &:-webkit-any-link {
+            text-decoration: none;
+          }
+
+          &:after,
+          &:visited {
+            text-decoration: none;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
     }
 `;
 
@@ -40,25 +58,36 @@ const Container = styled.div`
 
 const Layout = ({ children }) => {
   const { height } = useWindowDimensions();
-  /*
 
-  ** We will use this to allow the plugin options to dictate some theme styles **
+  const { sitePlugin } = useStaticQuery(graphql`
+    query NewPluginQuery {
+      sitePlugin(name: { eq: "gatsby-theme-esports" }) {
+        pluginOptions {
+          colors {
+            primaryColor
+            background
+            secondaryColor
+          }
+        }
+      }
+    }
+  `);
 
-   const { sitePlugin } = useStaticQuery(graphql`
-     query PluginQuery {
-       sitePlugin(name: { eq: "gatsby-theme-esports" }) {
-         pluginOptions {
-           colors
-         }
-       }
-     }
-   `);
+  const pluginColors = sitePlugin.pluginOptions.colors;
 
-  */
+  const theme = {
+    colors: { ...sitePlugin.pluginOptions.colors },
+    ...device
+  };
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={sitePlugin.pluginOptions.colors && theme}>
       <Container>
-        <GlobalStyle height={height} />
+        <GlobalStyle
+          height={height}
+          primaryColor={pluginColors && pluginColors.background}
+          color={pluginColors && pluginColors.primaryColor}
+        />
         {children}
       </Container>
     </ThemeProvider>

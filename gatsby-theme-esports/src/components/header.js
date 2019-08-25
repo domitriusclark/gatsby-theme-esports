@@ -53,7 +53,6 @@ const Header = () => {
         </li>
         {navigation}
       </ul>
-      }
     </StyledHeader>
   );
 };
