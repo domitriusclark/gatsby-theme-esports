@@ -1,0 +1,17 @@
+Games:
+  - name: Fortnite
+    icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1530061912128-SL2KYH5TODLV2ZKV7WQ2/ke17ZwdGBToddI8pDm48kGfiFqkITS6axXxhYYUCnlRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxQ1ibo-zdhORxWnJtmNCajDe36aQmu-4Z4SFOss0oowgxUaachD66r8Ra2gwuBSqM/Fortnite?format=500w
+  - name: League of Legends
+    icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1547604927482-4G02IQCTO259Z1QVAW8H/ke17ZwdGBToddI8pDm48kPXoztrODpcg18IwegF58sN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UY1KBeYOWhTMSN_cxcZUSTNPqZ-JwjlFI3rmqWBkZuvcP7cJNZlDXbgJNE9ef52e8w/LCS_Shield_2019_color_darkbg.png?format=500w
+
+Players:
+  - name: SirDimetrious
+    game: Fortnite
+    twitter: https://twitter.com/SirDimetrious
+    twitch: https://www.twitch.tv/SirDimetrious
+    avatar: https://pbs.twimg.com/media/ECogGHKUIAIKAZv?format=jpg&name=small
+  - name: Aphromoo
+    game: League of Legends
+    twitter: https://twitter.com/aphromoo
+    twitch: https://www.twitch.tv/aphromoo
+    avatar: https://pbs.twimg.com/media/EBk_qCEUYAAlnbr?format=jpg&name=large

@@ -4,6 +4,43 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useStaticQuery, graphql } from "gatsby";
 import { device } from "../theme/device";
 
+const optionsQuery = graphql`
+  {
+    sitePlugin(name: { eq: "gatsby-theme-esports" }) {
+      pluginOptions {
+        navLinks
+        colors {
+          primaryColor
+          secondaryColor
+          background
+        }
+      }
+    }
+  }
+`;
+
+const Layout = ({ children }) => {
+  const { height } = useWindowDimensions();
+
+  const { sitePlugin } = useStaticQuery(optionsQuery);
+
+  const pluginColors = sitePlugin.pluginOptions.colors;
+
+  const theme = {
+    colors: { ...sitePlugin.pluginOptions.colors },
+    ...device
+  };
+
+  return (
+    <ThemeProvider theme={pluginColors && theme}>
+      <Container>
+        <GlobalStyle height={height} />
+        {children}
+      </Container>
+    </ThemeProvider>
+  );
+};
+
 const GlobalStyle = createGlobalStyle`
     *,
     *::after ,
@@ -55,39 +92,5 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
-const Layout = ({ children }) => {
-  const { height } = useWindowDimensions();
-
-  const { sitePlugin } = useStaticQuery(graphql`
-    query NewPluginQuery {
-      sitePlugin(name: { eq: "gatsby-theme-esports" }) {
-        pluginOptions {
-          colors {
-            primaryColor
-            background
-            secondaryColor
-          }
-        }
-      }
-    }
-  `);
-
-  const pluginColors = sitePlugin.pluginOptions.colors;
-
-  const theme = {
-    colors: { ...sitePlugin.pluginOptions.colors },
-    ...device
-  };
-
-  return (
-    <ThemeProvider theme={pluginColors && theme}>
-      <Container>
-        <GlobalStyle height={height} />
-        {children}
-      </Container>
-    </ThemeProvider>
-  );
-};
 
 export default Layout;

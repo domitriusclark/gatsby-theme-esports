@@ -3,6 +3,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-esports",
       options: {
+        root: __dirname,
         navLinks: ["About", "Team"],
         colors: {
           background: "#000000",
@@ -10,7 +11,6 @@ module.exports = {
           secondaryColor: "#D21823"
         }
       }
-    },
-    "gatsby-plugin-transition-link"
+    }
   ]
 };
