@@ -1,17 +1,166 @@
+# 2471f77d7b884cd5bc00bc13831ec3e3
+
 Games:
   - name: Fortnite
     icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1530061912128-SL2KYH5TODLV2ZKV7WQ2/ke17ZwdGBToddI8pDm48kGfiFqkITS6axXxhYYUCnlRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxQ1ibo-zdhORxWnJtmNCajDe36aQmu-4Z4SFOss0oowgxUaachD66r8Ra2gwuBSqM/Fortnite?format=500w
   - name: League of Legends
     icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1547604927482-4G02IQCTO259Z1QVAW8H/ke17ZwdGBToddI8pDm48kPXoztrODpcg18IwegF58sN7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UY1KBeYOWhTMSN_cxcZUSTNPqZ-JwjlFI3rmqWBkZuvcP7cJNZlDXbgJNE9ef52e8w/LCS_Shield_2019_color_darkbg.png?format=500w
+  - name: Apex Legends
+    icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1551303006751-L2ZSSVUDF1HZWCP42DUH/ke17ZwdGBToddI8pDm48kJGvPks7W-x-ufyzB9Tw0e1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzwb00BviQxzGCm133ffOYzwwypB4bD5ISIaxBEu0_aLYDapOC4CyiXJt27lAtrGXs/apex+black.jpg?format=500w
+  - name: Content Creator
+    icon: https://images.squarespace-cdn.com/content/v1/5a012e62a8b2b08dfb252872/1551218958740-DAV55EDD1QNYZKC4GRBN/ke17ZwdGBToddI8pDm48kBOmUnfrY1uUdV9oRdYit3JZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwYGUmfUlhMh0eFH1yEcUTzg59_Dd0lZIBowJH6H5ze3-TAXsqZOPiSWgMJedLfFFM/image-asset.png?format=500w
 
 Players:
-  - name: SirDimetrious
-    game: Fortnite
-    twitter: https://twitter.com/SirDimetrious
-    twitch: https://www.twitch.tv/SirDimetrious
-    avatar: https://pbs.twimg.com/media/ECogGHKUIAIKAZv?format=jpg&name=small
   - name: Aphromoo
     game: League of Legends
-    twitter: https://twitter.com/aphromoo
-    twitch: https://www.twitch.tv/aphromoo
+    socials:
+      - https://twitter.com/aphromoo
+      - https://www.twitch.tv/aphromoo
     avatar: https://pbs.twimg.com/media/EBk_qCEUYAAlnbr?format=jpg&name=large
+  # - name: Ssumday
+  #   game: League of Legends
+  #   socials:
+  #     - twitter: https://twitter.com/ssumday
+  #     -
+  #   twitch: https://www.twitch.tv/ssumday
+  #   avatar: https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/03/03001843/Ssumday.jpg
+  # - name: FakeGod
+  #   game: League of Legends
+  #   twitter: https://twitter.com/fakegod
+  #   twitch: https://www.twitch.tv/fakegod
+  #   avatar: https://d1wrci9wmi4ouq.cloudfront.net/news/images/2021/7359669a563a03808490935b25fc27a5/thumbs/mobile-major/da98803383791ff69a62e2f702762e35.jpg
+  # - name: Amazing
+  #   game: League of Legends
+  #   twitter: https://twitter.com/Amazingx
+  #   twitch: https://esportbet.com/wp-content/uploads/2019/05/amazing.jpg
+  #   avatar: https://esportbet.com/wp-content/uploads/2019/06/100-thieves.jpg
+  # - name: Soligo
+  #   game: League of Legends
+  #   twitter: https://twitter.com/Soligoms
+  #   twitch: https://www.twitch.tv/soligo
+  #   avatar: https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/06/12133522/bang2019.jpg
+  # - name: Ryu
+  #   game: League of Legends
+  #   twitter: https://twitter.com/ryulol
+  #   twitch: https://www.twitch.tv/ryulol
+  #   avatar: https://static.invenglobal.com/upload/image/2018/03/19/i1521516682410767.jpeg
+  # - name: Bang
+  #   game: League of Legends
+  #   twitter: https://twitter.com/bang
+  #   twitch: https://www.twitch.tv/bang
+  #   avatar: https://pbs.twimg.com/profile_images/1153026368893931521/mMTN7qHo_400x400.jpg
+  # - name: Anda
+  #   game: League of Legends
+  #   twitter: https://twitter.com/AnDa
+  #   twitch: https://www.twitch.tv/anda
+  #   avatar: https://live.staticflickr.com/1906/44523865414_f13b1299e2_b.jpg
+  # - name: Prismal
+  #   game: League of Legends
+  #   twitter: https://twitter.com/prismal
+  #   twitch: https://www.twitch.tv/prismal
+  #   avatar: https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/05/16172923/41127153452_7adc6556cd_k.jpg
+  # - name: Stunt
+  #   game: League of Legends
+  #   twitter: https://twitter.com/stuntopolis
+  #   twitch: https://www.twitch.tv/stunt
+  #   avatar: https://pbs.twimg.com/profile_images/1163720279601737728/ECNmsG_H_400x400.jpg
+  # - name: Fragas
+  #   game: League of Legends
+  #   twitter: https://twitter.com/fragas
+  #   twitch: https://www.twitch.tv/fragas
+  #   avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/5dcdbd43-cc84-4c19-b0b4-93fd694bc66a-profile_image-300x300.jpeg
+  # - name: SirDimetrious
+  #   game: Fortnite
+  #   twitter: https://twitter.com/sirdimetrious
+  #   twitch: https://www.twitch.tv/sirdimetrious
+  #   avatar: https://pbs.twimg.com/profile_images/1165183245471760385/PkbrgHIW_400x400.jpg
+  # - name: Kenith
+  #   game: Fortnite
+  #   twitter: https://twitter.com/kenith
+  #   twitch: https://www.twitch.tv/kenith
+  #   avatar: https://www.prosettings.com/site/wp-content/uploads/2018/05/Kenith-Fortnite.jpg
+  # - name: Elevate
+  #   game: Fortnite
+  #   twitter: https://twitter.com/elevatefn
+  #   twitch: https://m.twitch.tv/elevate
+  #   avatar: https://pbs.twimg.com/media/EBJbwUIWwAEt2U3?format=jpg&name=medium
+  # - name: Ceice
+  #   game: Fortnite
+  #   twitter: https://twitter.com/ceice
+  #   twitch: https://www.twitch.tv/ceice
+  #   avatar: https://pbs.twimg.com/profile_images/1152113635717713920/zC_WdfoD_400x400.jpg
+  # - name: Kyszui
+  #   game: Fortnite
+  #   twitter: https://twitter.com/kyzui
+  #   twitch: https://www.twitch.tv/soligo
+  #   avatar: https://i.ytimg.com/vi/cnHboa7DSzQ/maxresdefault.jpg
+  # - name: Blind
+  #   game: Fortnite
+  #   twitter: https://twitter.com/blind
+  #   twitch: hhttps://m.twitch.tv/blindbtw
+  #   avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/1ae3b0f0-56f0-471e-8d41-4905b1db109d-profile_image-300x300.jpg
+  # - name: Klass
+  #   game: Fortnite
+  #   twitter: https://twitter.com/klass
+  #   twitch: https://m.twitch.tv/klasslol/profile
+  #   avatar: https://pbs.twimg.com/profile_images/1164660916203466754/7FBANF7F_400x400.jpg
+  # - name: Arkhram
+  #   game: Fortnite
+  #   twitter: https://twitter.com/arkhram1x?lang=en
+  #   twitch: https://www.twitch.tv/arkhram
+  #   avatar: https://pbs.twimg.com/profile_images/1148674278629339136/VZfCqmMu_400x400.png
+  # - name: Gigz
+  #   game: Apex Legends
+  #   twitter: https://twitter.com/gigz?lang=en
+  #   twitch: https://www.twitch.tv/gigz
+  #   avatar: https://pbs.twimg.com/profile_images/1149965067015708672/9F4Uhfd1_400x400.jpg
+  # - name: Teenage
+  #   game: Apex Legends
+  #   twitter: https://twitter.com/teenage?lang=en
+  #   twitch: http://Twitch.Tv/Teenage
+  #   avatar: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwimgNaxo7DkAhXtUt8KHfnGCTwQjRx6BAgBEAQ&url=https%3A%2F%2Fapexlegends-esports.gamepedia.com%2FTeenage&psig=AOvVaw2Ry9L1QOkJdTekNEAPWa1u&ust=1567449468457800
+  # - name: Lifted
+  #   game: Apex Legends
+  #   twitter: https://twitter.com/100t_lifted?lang=en
+  #   twitch: https://www.twitch.tv/lifted
+  #   avatar: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiQ_vaIpbDkAhUFneAKHYUbB24QjRx6BAgBEAQ&url=https%3A%2F%2Ftwitter.com%2F100t_lifted%2Fstatus%2F987527162625384448&psig=AOvVaw2S9EPD-Y1Okmm90SBCLwCv&ust=1567450164770839
+  # - name: Jp2
+  #   game: Apex Legends
+  #   twitter: https://twitter.com/100t_jp2?lang=en
+  #   twitch: https://www.twitch.tv/thejp2
+  #   avatar: https://pbs.twimg.com/profile_images/1114249381991944192/ztfICKLE_400x400.jpg
+  # - name: Nadeshot
+  #   game: Content Creator
+  #   twitter: https://twitter.com/Nadeshot?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+  #   twitch: https://www.twitch.tv/nadeshot
+  #   avatar: https://pbs.twimg.com/profile_images/1148432203941986304/tGPzQDaC_400x400.jpg
+  # - name: NoahJ456
+  #   game: Content Creator
+  #   twitter: https://twitter.com/NoahJ456
+  #   twitch: https://www.twitch.tv/noahj456
+  #   avatar: https://i.ytimg.com/vi/0x1Q34dJhPs/maxresdefault.jpg
+  # - name: Valkyrae
+  #   game: Content Creator
+  #   twitter: https://twitter.com/valkyrae?lang=en
+  #   twitch: https://www.twitch.tv/valkyrae
+  #   avatar: https://pbs.twimg.com/media/DqIspLzVsAAbWUt.jpg
+  # - name: Courage
+  #   game: Content Creator
+  #   twitter: https://twitter.com/CouRageJD
+  #   twitch: https://www.twitch.tv/couragejd
+  #   avatar: https://www.hotspawn.com/app/uploads/2019/05/Courage-1024x683.jpg
+  # - name: Avalanche
+  #   game: Content Creator
+  #   twitter: https://twitter.com/avalanche100t?lang=en
+  #   twitch: https://www.twitch.tv/avalanche
+  #   avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY-Hn48x8HBdmZJG0lPgFMYfVimKqzx2S505qdiNHpIdHsgZOT
+  # - name: Froste
+  #   game: Content Creator
+  #   twitter: https://twitter.com/Froste
+  #   twitch: https://www.twitch.tv/Froste
+  #   avatar: https://pbs.twimg.com/media/D9Cz8Z3UcAAfA3E?format=jpg&name=4096x4096
+  # - name: Mako
+  #   game: Content Creator
+  #   twitter: https://twitter.com/mako?lang=en
+  #   twitch: https://www.twitch.tv/mako
+  #   avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/321f3aff-0b34-4ce1-a25d-73b3c24ee056-profile_image-300x300.png

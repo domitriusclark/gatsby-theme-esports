@@ -10,8 +10,7 @@ const PLAYERS_QUERY = graphql`
           Players {
             name
             game
-            twitter
-            twitch
+            socials
             avatar
           }
         }
@@ -54,7 +53,7 @@ const Socials = styled.div``;
 
 const Game = () => {
   const { allData } = useStaticQuery(PLAYERS_QUERY);
-  const players = allData.edges[0].node.Players;
+  const players = allData.edges[0].node.Players.LeagueOfLegends;
   const playersCollection = players.map(p => {
     return (
       <StyledPlayerCard>

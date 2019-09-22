@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
+import PlayerCard from "./playerCard";
 
 const GAME_QUERY = graphql`
   {
@@ -9,11 +10,22 @@ const GAME_QUERY = graphql`
         node {
           Games {
             icon
+            name
+          }
+          Players {
+            game
+            name
+            socials
+            avatar
           }
         }
       }
     }
   }
+`;
+
+const Container = styled.div`
+  display: flex;
 `;
 
 const GameImage = styled.div`
@@ -25,9 +37,14 @@ const GameImage = styled.div`
   width: 200px;
 `;
 
-const Game = () => {
+const Game = props => {
   const { allData } = useStaticQuery(GAME_QUERY);
+  const [showPlayers, setShowPlayers] = React.useState(false);
 
+  console.log(props);
+  console.log(allData);
+
+  const players = allData.edges[0].node.Players;
   const games = allData.edges[0].node.Games;
 
   const gamesCollection =
@@ -36,7 +53,12 @@ const Game = () => {
       return <GameImage icon={g.icon}></GameImage>;
     });
 
-  return gamesCollection;
+  return (
+    <Container>
+      {gamesCollection}
+      {showPlayers && <PlayerCard></PlayerCard>}
+    </Container>
+  );
 };
 
 export default Game;
