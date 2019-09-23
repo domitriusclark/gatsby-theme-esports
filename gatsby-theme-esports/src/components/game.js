@@ -3,26 +3,37 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import PlayerCard from "./playerCard";
 
-const GAME_QUERY = graphql`
+const GAMES_QUERY = graphql`
   {
-    allData {
-      edges {
-        node {
-          Games {
-            icon
-            name
-          }
-          Players {
-            game
-            name
-            socials
-            avatar
+    takeshape {
+      getGameList {
+        items {
+          name
+          icon {
+            path
           }
         }
       }
     }
   }
 `;
+
+const Game = props => {
+  const [showPlayers, setShowPlayers] = React.useState(false);
+  const data = useStaticQuery(GAMES_QUERY);
+
+  console.log(data.takeshape.getGameList.items);
+
+  return (
+    <Container>
+      {showPlayers && <PlayerCard></PlayerCard>}
+      {data &&
+        data.takeshape.getGameList.items.map(game => (
+          <img src={`https://images.takeshape.io/${game.icon.path}`} />
+        ))}
+    </Container>
+  );
+};
 
 const Container = styled.div`
   display: flex;
@@ -36,29 +47,5 @@ const GameImage = styled.div`
   height: 200px;
   width: 200px;
 `;
-
-const Game = props => {
-  const { allData } = useStaticQuery(GAME_QUERY);
-  const [showPlayers, setShowPlayers] = React.useState(false);
-
-  console.log(props);
-  console.log(allData);
-
-  const players = allData.edges[0].node.Players;
-  const games = allData.edges[0].node.Games;
-
-  const gamesCollection =
-    games &&
-    games.map(g => {
-      return <GameImage icon={g.icon}></GameImage>;
-    });
-
-  return (
-    <Container>
-      {gamesCollection}
-      {showPlayers && <PlayerCard></PlayerCard>}
-    </Container>
-  );
-};
 
 export default Game;

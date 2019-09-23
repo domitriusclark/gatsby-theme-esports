@@ -12,10 +12,8 @@ const StyledTeam = styled.div`
   align-items: center;
 `;
 
-const Team = ({ pageContext, data }) => {
+const Team = ({ pageContext }) => {
   const { height } = useWindowDimensions();
-
-  console.log(data);
 
   return (
     <Layout>
@@ -26,29 +24,5 @@ const Team = ({ pageContext, data }) => {
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    takeshape {
-      getGameList {
-        items {
-          name
-          icon {
-            path
-          }
-        }
-      }
-      getPlayerList {
-        items {
-          playerName
-          socials {
-            network
-            url
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default Team;

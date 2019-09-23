@@ -8,7 +8,6 @@ const optionsQuery = graphql`
   {
     sitePlugin(name: { eq: "gatsby-theme-esports" }) {
       pluginOptions {
-        navLinks
         colors {
           primaryColor
           secondaryColor
