@@ -3,8 +3,12 @@ import Layout from "../components/layout";
 import styled from "styled-components";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import Header from "../components/header";
+import logo from "../static/thievesLogo.png";
 
 const StyledLanding = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   & p {
     color: ${props => props.theme.colors.secondaryColor};
   }
@@ -17,7 +21,7 @@ const Landing = () => {
     <Layout>
       <Header />
       <StyledLanding style={{ height: height }}>
-        <p>Hello there</p>
+        <img src={logo}></img>
       </StyledLanding>
     </Layout>
   );
